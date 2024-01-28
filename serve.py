@@ -10,6 +10,8 @@ def serve():
     if request.method == 'POST':
         # Create a subprocess to run the stress_cpu.py script
         subprocess.Popen(["python3", "stress_cpu.py"])
+        hostname = socket.gethostname()
+        return f"push EC2 instance {socket.gethostbyname(hostname)} to maximum CPU utilization"
 
     elif request.method == 'GET':
         hostname = socket.gethostname()
