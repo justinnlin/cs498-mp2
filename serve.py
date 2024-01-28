@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask import Flask, request
 import socket
 import subprocess
 
@@ -11,7 +12,7 @@ def serve():
         # Create a subprocess to run the stress_cpu.py script
         subprocess.Popen(["python3", "stress_cpu.py"])
         hostname = socket.gethostname()
-        return f"push EC2 instance {socket.gethostbyname(hostname)} to maximum CPU utilization"
+        return "stated"
 
     elif request.method == 'GET':
         hostname = socket.gethostname()
