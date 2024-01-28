@@ -13,7 +13,7 @@ def serve():
         return 'stated'
 
     elif request.method == 'GET':
-        return socket.gethostbyname()
+        return socket.gethostname()
 
 if __name__ == "__main__":
     # Run the Flask app on host 0.0.0.0 (accessible from outside) and port 5000
