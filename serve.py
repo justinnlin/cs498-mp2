@@ -10,7 +10,6 @@ def serve():
     if request.method == 'POST':
         # Create a subprocess to run the stress_cpu.py script
         subprocess.Popen(["python3", "stress_cpu.py"])
-        return jsonify(message="CPU stress test start"),202
 
     elif request.method == 'GET':
         hostname = socket.gethostname()
